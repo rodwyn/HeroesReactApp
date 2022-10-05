@@ -32,6 +32,7 @@ export const SearchPage = () => {
           <hr />
           <form onSubmit={onSearchSubmit}>
             <input
+              aria-label="search"
               type="text"
               placeholder="search a hero"
               className="form-control"
@@ -52,7 +53,7 @@ export const SearchPage = () => {
           {
             (q === '') 
             ? <div className="alert alert-primary animate__animated animate__fadeIn">Search a hero</div>
-            : (heroes.length === 0)  && <div className="alert alert-danger animate__animated animate__fadeIn">Not hero with <b>{q}</b></div>
+            : (heroes.length === 0)  && <div aria-label="not-hero" className="alert alert-danger animate__animated animate__fadeIn">Not hero with <b>{q}</b></div>
           }
 
           {
